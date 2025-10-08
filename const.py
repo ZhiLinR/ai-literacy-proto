@@ -1,18 +1,20 @@
 import os
 from dotenv import load_dotenv
+from openai import OpenAI
 
-# Load variables from .env into environment
 load_dotenv()
 
-from openai import OpenAI
 OPENAI_CLIENT = OpenAI()
 
 DIVORCE_VS = os.getenv("DIVORCE_VS")
-
 VECTOR_STORES = [DIVORCE_VS]
+
+PASSWORD = os.getenv("PASSWORD", "PASSWORD")
 
 MAILGUN_API_KEY = os.getenv("MAILGUN_API_KEY", "API_KEY")
 MAILGUN_SANDBOX_DOMAIN = os.getenv("MAILGUN_SANDBOX_DOMAIN", "SANDBOX")
 MAILGUN_SANDBOX_USER = os.getenv("MAILGUN_SANDBOX_USER", "MAILGUN_SANDBOX_USER")
 
-PASSWORD = os.getenv("PASSWORD", "PASSWORD")
+CALENDLY_USER_ID = os.getenv("CALENDLY_USER_ID", "CALENDLY_USER_ID")
+CALENDLY_AUTH_TOKEN = os.getenv("CALENDLY_AUTH_TOKEN", "CALENDLY_AUTH_TOKEN")
+CALENDLY_BASE = "https://api.calendly.com"
