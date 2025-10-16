@@ -1,7 +1,7 @@
 from const import VECTOR_STORES
 from .email import SUMMARISE_AND_EMAIL
+from .calendly import CREATE_CALENDAR_EVENT
 
-# Inbuilt OpenAI Tool Calls
 FILE_SEARCH = {
     "type": "file_search",
     "vector_store_ids": VECTOR_STORES
@@ -17,4 +17,4 @@ WEB_SEARCH =  {
     }
 }
 
-TOOLS = [SUMMARISE_AND_EMAIL, FILE_SEARCH]
+TOOLS = [FILE_SEARCH, SUMMARISE_AND_EMAIL, CREATE_CALENDAR_EVENT]
